@@ -11,7 +11,7 @@ public class GUI {
 	JButton button;
 	JTextField text1, text2, text3;
 	public void GUI(){
-		frame = new JFrame("TicTacToe Sim");
+		frame = new JFrame("TicTacToe Simulator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(500, 500);
 		frame.setLocationRelativeTo(null);
