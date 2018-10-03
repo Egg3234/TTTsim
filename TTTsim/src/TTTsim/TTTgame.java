@@ -14,7 +14,7 @@ import java.util.Random;
 public class TTTgame {
 	private int score1, score2, games;
 
-	public TTTgame() {
+	public TTTgame(int g) {
 		
 
 	}
