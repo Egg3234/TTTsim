@@ -17,7 +17,7 @@ public class TTTgame {
 	private int[][] win;
 
 	public TTTgame(int g) {
-		
+		games = g;
 
 	}
 
