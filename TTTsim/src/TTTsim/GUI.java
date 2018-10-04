@@ -16,6 +16,7 @@ public class GUI {
 	JButton speedup, slowdown;
 	JTextField text1, text2, text3;
 	public void GUI(){
+		
 		//This bit makes the window appear. DO NOT DELETE PLZ
 		frame = new JFrame("TicTacToe Simulator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,19 +24,21 @@ public class GUI {
 		frame.setLocationRelativeTo(null);
 		panel = new JPanel();
 		GridBagConstraints c = new GridBagConstraints();
+		
 		//givin' it a title
 		label1 = new JLabel("TIC TAC TOE");
 		c.gridx = 0;
 		c.gridy = 0;
 		panel.add(label1, c);
-		
 		panel = new JPanel();
+		
 		//button to make the tttsim go supersonic (not finished)
 		speedup = new JButton("SpeedUp");
 		c.gridx = 1;
 		c.gridy = 2;
 		panel.add(speedup, c);
 		
+		//hit this button to slow this boi down
 		slowdown = new JButton("Slowdown");
 		c.gridx = 1;
 		c.gridy = 2;
