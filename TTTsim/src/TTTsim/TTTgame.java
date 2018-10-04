@@ -12,7 +12,9 @@ package TTTsim;
 import java.util.Random;
 
 public class TTTgame {
-	private int score1, score2, games;
+	private int score1, score2, games, turn;
+	private int[][] board;
+	private int[][] win;
 
 	public TTTgame(int g) {
 		
