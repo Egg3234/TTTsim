@@ -3,7 +3,7 @@ package TTTsim;
 public class TTTSemiUsefulThings {
 
 	public static void main(String[] args) {
-		//lukes autism corner
+		//lukes autism corner. 
 		//COPY THIS FOR THE THING
 		wait(2);
 		
