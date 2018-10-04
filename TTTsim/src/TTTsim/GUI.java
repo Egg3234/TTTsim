@@ -36,6 +36,11 @@ public class GUI {
 		c.gridy = 2;
 		panel.add(speedup, c);
 		
+		slowdown = new JButton("SlowDown");
+		c.gridx = 1;
+		c.gridy = 2;
+		panel.add(slowdown, c);
+		
 		//the second bit that makes the window show up
 		frame.setContentPane(panel);
 		frame.setVisible(true);
