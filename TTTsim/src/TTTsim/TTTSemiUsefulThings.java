@@ -3,13 +3,17 @@ package TTTsim;
 public class TTTSemiUsefulThings {
 
 	public static void main(String[] args) {
-		System.out.println("1");
+		//COPY THIS FOR THE THING
 		wait(2);
-		System.out.println("2");
-		System.out.println("");
-		intCutter(123456);
+		
+		//COPY THIS EXACTLY, JUST CHANGE THE ARRAY NAME
+		int[] i=intCutter(32435234);
+		
+		
 	}
 	
+	
+	//puts the program in stasis for a specified amount of time
 	public static void wait(int i) {
 		i=i*1000;
 		try {
@@ -19,11 +23,11 @@ public class TTTSemiUsefulThings {
 		}
 	}
 	
+	
+	//cuts an int into an array, with way too many steps, cause divison is too complicated for me
 	public static int[] intCutter(int input) {
 		String useful=(input+"");
-		System.out.println(useful);
 		int length=useful.length();
-		System.out.println(length);
 		int[] array= new int[length];
 		int counter=1;
 		int util=0;
@@ -31,19 +35,26 @@ public class TTTSemiUsefulThings {
 		for(int a=0; a<length-1; a++) {
 			counter=counter*10;
 		}
-		System.out.println("imp"+counter);
-		//fixthisshitAAAQAAAA
+		int x=0;
+		int y=1;
+		String s;
 		for(int a=0; a<length; a++) {
-			array[a]=input%counter;
-			counter=counter/10;
-			input=input/10;
-			System.out.println(counter);
-			System.out.println(input);
-			System.out.println("thisone"+array[a]);
+			s=useful.substring(x,y);
+			x=x+1;
+			y=y+1;
+			int result = Integer.parseInt(s);	
+			array[(a)]=result;
+			//System.out.println("this one works maybe?: "+ array[a]);
+			//System.out.println(" ");
 		}
 		
-		System.out.println(counter);
 		return array; 
 	}
+	
+	
+	//next method
+	
+	
+	
 
 }
