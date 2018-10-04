@@ -36,7 +36,7 @@ public class TTTgame {
 	 * @return
 	 */
 	public int pTurn() {
-		
+		 
 		
 		return 0;
 
