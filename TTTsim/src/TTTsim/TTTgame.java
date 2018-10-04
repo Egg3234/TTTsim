@@ -18,6 +18,7 @@ public class TTTgame {
 
 	public TTTgame(int g) {
 		games = g;
+		
 
 	}
 
