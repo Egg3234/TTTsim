@@ -13,7 +13,7 @@ public class GUI {
 	JFrame frame;
 	JPanel panel;
 	JLabel label1, label2, label3, total;
-	JButton button;
+	JButton speedup, slowdown;
 	JTextField text1, text2, text3;
 	public void GUI(){
 		//This bit makes the window appear. DO NOT DELETE PLZ
@@ -31,10 +31,10 @@ public class GUI {
 		
 		panel = new JPanel();
 		//button to make the tttsim go supersonic (not finished)
-		button = new JButton("SpeedUp");
+		speedup = new JButton("SpeedUp");
 		c.gridx = 1;
 		c.gridy = 2;
-		panel.add(button, c);
+		panel.add(speedup, c);
 		
 		//the second bit that makes the window show up
 		frame.setContentPane(panel);
