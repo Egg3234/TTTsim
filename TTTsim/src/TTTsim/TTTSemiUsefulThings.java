@@ -5,10 +5,13 @@ public class TTTSemiUsefulThings {
 	public static void main(String[] args) {
 		//lukes autism corner. 
 		//COPY THIS FOR THE THING
-		wait(2);
+		wait(0);
 		
 		//COPY THIS EXACTLY, JUST CHANGE THE ARRAY NAME
 		int[] i=intCutter(32435234);
+		
+		//I DONT KNOW WHAT TO DO ANYMORE HELP
+		reeBot(999);
 		
 		
 	}
@@ -54,7 +57,12 @@ public class TTTSemiUsefulThings {
 	
 	
 	//next method
-	
+	public static void reeBot(int length) {
+		System.out.print("FUCKING NORMIES, R");
+		for(int i=0; i<length; i++) {
+			System.out.print("E");
+		}
+	}
 	
 	
 
