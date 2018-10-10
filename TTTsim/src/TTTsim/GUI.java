@@ -16,6 +16,7 @@ public class GUI {
 	JButton speedup, slowdown;
 	JTextField text1, text2, text3;
 	public void GUI(){
+		//this imports lukes toolkit
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		
 		//This bit makes the window appear. DO NOT DELETE PLZ
