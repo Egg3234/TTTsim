@@ -3,13 +3,25 @@ package TTTsim;
 public class TTTSemiUsefulThings {
 
 	public static void main(String[] args) {
-		System.out.println("1");
-		wait(2);
-		System.out.println("2");
-		System.out.println("");
-		intCutter(123456);
+		//lukes autism corner. 
+		//COPY THIS FOR THE THING
+		wait(1);
+		
+		//COPY THIS EXACTLY, JUST CHANGE THE ARRAY NAME
+		int[] i=intCutter(32435234);
+		
+		//I DONT KNOW WHAT TO DO ANYMORE HELP
+		reeBot(3);
+		
+		//I HATE QUADRATICS, THIS FIXES IT GOOD
+		quadratic(1,7,12);
+		
+		
+		
 	}
 	
+	
+	//puts the program in stasis for a specified amount of time
 	public static void wait(int i) {
 		i=i*1000;
 		try {
@@ -19,11 +31,11 @@ public class TTTSemiUsefulThings {
 		}
 	}
 	
+	
+	//cuts an int into an array, with way too many steps, cause divison is too complicated for me
 	public static int[] intCutter(int input) {
 		String useful=(input+"");
-		System.out.println(useful);
 		int length=useful.length();
-		System.out.println(length);
 		int[] array= new int[length];
 		int counter=1;
 		int util=0;
@@ -31,19 +43,45 @@ public class TTTSemiUsefulThings {
 		for(int a=0; a<length-1; a++) {
 			counter=counter*10;
 		}
-		System.out.println("imp"+counter);
-		//fixthisshitAAAQAAAA
+		int x=0;
+		int y=1;
+		String s;
 		for(int a=0; a<length; a++) {
-			array[a]=input%counter;
-			counter=counter/10;
-			input=input/10;
-			System.out.println(counter);
-			System.out.println(input);
-			System.out.println("thisone"+array[a]);
+			s=useful.substring(x,y);
+			x=x+1;
+			y=y+1;
+			int result = Integer.parseInt(s);	
+			array[(a)]=result;
+			//System.out.println("this one works maybe?: "+ array[a]);
+			//System.out.println(" ");
 		}
 		
-		System.out.println(counter);
 		return array; 
 	}
+	
+	
+	//important reebot. this is required for the program to function
+	public static void reeBot(int length) {
+		System.out.print("FUCKING NORMIES, R");
+		for(int i=0; i<length; i++) {
+			System.out.print("E");
+		}
+		System.out.println("");
+	}
+	
+	//(x+4)(x+3)
+	//x^2+7x+12
+	//next method
+	public static String quadratic(double a, double b, double c) {
+		double num1=((-b+Math.sqrt(b*b-4*a*c))/2*a);
+		double num2=((-b-Math.sqrt(b*b-4*a*c))/2*a);
+		System.out.println("Answers are:"+num1+", "+num2);
+		double discrim=b*b-4*a*c;
+		System.out.println("Discriminant is: "+discrim);
+		
+		String p="ploxholder";
+		return p;
+	}
+	
 
 }
