@@ -16,6 +16,7 @@ public class GUI {
 	JButton speedup, slowdown;
 	JTextField text1, text2, text3;
 	public void GUI(){
+		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		
 		//This bit makes the window appear. DO NOT DELETE PLZ
 		frame = new JFrame("TicTacToe Simulator");
@@ -42,6 +43,7 @@ public class GUI {
 		slowdown = new JButton("Slowdown");
 		c.gridx = 1;
 		c.gridy = 2;
+		
 		panel.add(slowdown, c);
 		
 		//the second bit that makes the window show up (not finished)
