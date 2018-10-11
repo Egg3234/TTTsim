@@ -12,12 +12,14 @@ public class GUI {
 //preparing a crapton of visual variable things
 	JFrame frame;
 	JPanel panel;
-	JLabel label1, label2, label3, total;
+	JLabel label1, label2, label3, title;
 	JButton speedup, slowdown;
 	JTextField text1, text2, text3;
 	public void GUI(){
+		//this imports lukes toolkit
+		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		
-		//This bit makes the window appear. DO NOT DELETE PLZ
+		//This bit makes the window appear. DO NOT DELETE PLZ (finished)
 		frame = new JFrame("TicTacToe Simulator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1920, 1080);
@@ -25,26 +27,27 @@ public class GUI {
 		panel = new JPanel();
 		GridBagConstraints c = new GridBagConstraints();
 		
-		//givin' it a title
-		label1 = new JLabel("TIC TAC TOE");
+		//givin' it a title (finished)
+		title = new JLabel("TIC TAC TOE");
 		c.gridx = 0;
 		c.gridy = 0;
-		panel.add(label1, c);
+		panel.add(title, c);
 		panel = new JPanel();
 		
-		//button to make the tttsim go supersonic (not finished)
+		//button to make the tttsim go supersonic using TTTSemiUsefullThings's wait bits (not finished)
 		speedup = new JButton("SpeedUp");
 		c.gridx = 1;
 		c.gridy = 2;
 		panel.add(speedup, c);
 		
-		//hit this button to slow this boi down
+		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (not finished)
 		slowdown = new JButton("Slowdown");
-		c.gridx = 1;
+		c.gridx = 30;
 		c.gridy = 2;
+		
 		panel.add(slowdown, c);
 		
-		//the second bit that makes the window show up
+		//the second bit that makes the window show up (finished)
 		frame.setContentPane(panel);
 		frame.setVisible(true);
 		//that's all folks
