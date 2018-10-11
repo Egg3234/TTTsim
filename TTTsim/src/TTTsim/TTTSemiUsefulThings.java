@@ -23,7 +23,8 @@ public class TTTSemiUsefulThings {
 		//System.out.println(i2[1]);
 		//System.out.println(i2[2]);
 
-		rPSSimulator();
+		//HOLY SHIT I DONT KNOW WHAT TO DO HELP, IM JUST MAKING RANDOM CRAP, SERIOUSLY
+		//rPSSimulator();
 		
 	}
 	
@@ -88,7 +89,7 @@ public class TTTSemiUsefulThings {
 	}
 	
 	
-	//
+	//its rock paper scissors
 	public static void rPSSimulator() {
 		int win=0;
 		Scanner i=new Scanner(System.in);
