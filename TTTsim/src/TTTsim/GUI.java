@@ -19,7 +19,7 @@ public class GUI {
 		//this imports lukes toolkit
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		
-		//This bit makes the window appear. DO NOT DELETE PLZ
+		//This bit makes the window appear. DO NOT DELETE PLZ (finished)
 		frame = new JFrame("TicTacToe Simulator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1920, 1080);
@@ -34,20 +34,20 @@ public class GUI {
 		panel.add(title, c);
 		panel = new JPanel();
 		
-		//button to make the tttsim go supersonic (not finished)
+		//button to make the tttsim go supersonic using TTTSemiUsefullThings's wait bits (not finished)
 		speedup = new JButton("SpeedUp");
 		c.gridx = 1;
 		c.gridy = 2;
 		panel.add(speedup, c);
 		
-		//hit this button to slow this boi down (not finished)
+		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (not finished)
 		slowdown = new JButton("Slowdown");
-		c.gridx = 1;
+		c.gridx = 30;
 		c.gridy = 2;
 		
 		panel.add(slowdown, c);
 		
-		//the second bit that makes the window show up (not finished)
+		//the second bit that makes the window show up (finished)
 		frame.setContentPane(panel);
 		frame.setVisible(true);
 		//that's all folks
