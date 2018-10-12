@@ -30,6 +30,7 @@ public class GUI {
 		
 		//givin' it a title (finished)
 		title = new JLabel("TIC TAC TOE");
+		//This picks the location of the object
 		c.gridx = 0;
 		c.gridy = 0;
 		panel.add(title, c);
