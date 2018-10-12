@@ -18,6 +18,7 @@ public class GUI {
 	public void GUI(){
 		//this imports lukes toolkit
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
+		TTTgame game = new TTTgame(0);
 		
 		//This bit makes the window appear. DO NOT DELETE PLZ (finished)
 		frame = new JFrame("TicTacToe Simulator");
@@ -44,8 +45,9 @@ public class GUI {
 		slowdown = new JButton("Slowdown");
 		c.gridx = 30;
 		c.gridy = 2;
-		
 		panel.add(slowdown, c);
+		
+		
 		
 		//the second bit that makes the window show up (finished)
 		frame.setContentPane(panel);
