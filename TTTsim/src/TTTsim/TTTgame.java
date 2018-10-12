@@ -115,9 +115,5 @@ public class TTTgame {
 		//Returns 0 if no-one won, 1 for player 1, 2 for player 2
 		return winner;
 	}
-	
-	/**
-	 * 
-	 */
 
 }
