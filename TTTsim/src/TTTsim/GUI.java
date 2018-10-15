@@ -17,7 +17,6 @@ public class GUI {
 	JTextField text1, text2, text3;
 	double time=1;
 	public void GUI(){
-		
 		//this imports lukes toolkit
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		TTTgame game = new TTTgame(0);
@@ -58,7 +57,9 @@ public class GUI {
 		slowdown.addActionListener(new ActionListener(){ 
 			@Override 
 			public void actionPerformed(ActionEvent arg0) { 
-			
+			game.turn();
+			game.win();
+			Tools.wait(time);
 			} 
 			});
 		
