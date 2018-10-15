@@ -38,7 +38,7 @@ public class GUI {
 		panel.add(title, c);
 		panel = new JPanel();
 		
-		//button to make the tttsim go supersonic using TTTSemiUsefullThings's wait bits (not finished)
+		//button to make the tttsim go supersonic using TTTSemiUsefullThings's wait bits (finished)
 		speedup = new JButton("SpeedUp");
 		c.gridx = 1;
 		c.gridy = 2;
@@ -51,7 +51,7 @@ public class GUI {
 			} 
 			});
 		
-		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (not finished)
+		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (finished)
 		slowdown = new JButton("Slowdown");
 		c.gridx = 30;
 		c.gridy = 2;
