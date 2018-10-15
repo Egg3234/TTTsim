@@ -13,13 +13,11 @@ import java.util.Random;
 
 public class TTTgame {
 	//Variables
-	TTTSemiUsefulThings wt;
 	private int score1, score2, games, turn, win;
 	private int[][] board;
 
 	//Constructor
 	public TTTgame(int g) {
-		wt = new TTTSemiUsefulThings();
 		games = g;
 		turn = 1;
 		board = new int[3][3];
@@ -67,9 +65,8 @@ public class TTTgame {
 	/**
 	 * Determines if anyone has won
 	 */
-	public int win(int t) {
+	public int win() {
 		int winner=0;
-		int time = t;
 		
 		//Checks all possibilities for player 1
 		if(board[0][0]==1&&board[0][1]==1&&board[0][2]==1) {
@@ -110,10 +107,9 @@ public class TTTgame {
 			winner = 0;
 		}
 		
-		wt.wait(time);
-		
 		//Returns 0 if no-one won, 1 for player 1, 2 for player 2
 		return winner;
+
 	}
 
 }
