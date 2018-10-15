@@ -1,6 +1,12 @@
 package TTTsim;
 /*
  * Main class for TTTsim which runs the program
+ * 
+ * 10-12-18
+ * 
+ * Samuel Giesbrecht
+ * Luke Schroeder
+ * Noah Voth
  */
 
 public class TTTsim {
