@@ -15,7 +15,9 @@ public class GUI {
 	JLabel label1, label2, label3, title;
 	JButton speedup, slowdown;
 	JTextField text1, text2, text3;
+	double time=1;
 	public void GUI(){
+		
 		//this imports lukes toolkit
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		TTTgame game = new TTTgame(0);
@@ -41,14 +43,26 @@ public class GUI {
 		c.gridx = 1;
 		c.gridy = 2;
 		panel.add(speedup, c);
+		speedup.addActionListener(new ActionListener(){ 
+			@Override 
+			public void actionPerformed(ActionEvent arg0) { 
+			time=time/2;
+			System.out.println("Speedup " + time);
+			} 
+			});
 		
 		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (not finished)
 		slowdown = new JButton("Slowdown");
 		c.gridx = 30;
 		c.gridy = 2;
 		panel.add(slowdown, c);
-		
-		
+		slowdown.addActionListener(new ActionListener(){ 
+			@Override 
+			public void actionPerformed(ActionEvent arg0) { 
+			time=time*2;
+			System.out.println("Slowdown " + time);
+			} 
+			});
 		
 		//the second bit that makes the window show up (finished)
 		frame.setContentPane(panel);
