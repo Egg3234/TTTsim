@@ -26,14 +26,18 @@ public class TTTSemiUsefulThings {
 		//HOLY SHIT I DONT KNOW WHAT TO DO HELP, IM JUST MAKING RANDOM CRAP, SERIOUSLY
 		//rPSSimulator();
 		
+		//SNAKE? I DONT KNOW ANYMORE
+		snakeThing(5, 1);
+		System.out.println("kdd");
+		
 	}
 	
 	
 	//puts the program in stasis for a specified amount of time
-	public static void wait(int i) {
+	public static void wait(double i) {
 		i=i*1000;
 		try {
-			Thread.sleep(i);
+			Thread.sleep((long) i);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -70,7 +74,7 @@ public class TTTSemiUsefulThings {
 	
 	//important reebot. this is required for the program to function
 	public static void reeBot(int length) {
-		System.out.print("FUCKING NORMIES, R");
+		System.out.print("R");
 		for(int i=0; i<length; i++) {
 			System.out.print("E");
 		}
@@ -274,6 +278,99 @@ public class TTTSemiUsefulThings {
 				System.out.println("###> How'd you do that? Try again.");
 			}
 			wait(1);
+
+		}
+	}
+	
+	
+	//halp
+	public static void snakeThing(int xy, int time) {
+		if(xy>20) {
+			xy=20;
+		}
+		Random r=new Random();
+		System.out.println(xy);
+		int util=0;
+		int startx=r.nextInt(xy-1)+1;
+		int starty=r.nextInt(xy-1)+1;
+		String[][] board=new String[xy][xy];
+		System.out.println("");
+		System.out.println(startx);
+		System.out.println(starty);
+
+		//#########################################
+		for (int x = 0; x < board.length; x++){
+			System.out.println("");
+			for (int y = 0; y < board[x].length; y++){ 
+				util+=1;
+				board[x][y] = ("[ ]"); 
+				}
+			}
+		System.out.println("");
+		//#############################################
+		
+		board[startx][starty]="[0]";
+		
+		//#########################################
+		for (int x = 0; x < board.length; x++){
+			System.out.println("");
+			for (int y = 0; y < board[x].length; y++){ 
+				util+=1;
+				System.out.print(board[x][y]);
+				}
+			}
+		System.out.println("");
+		//#############################################
+		
+		
+		int dead=0;
+		int xx=startx, yy=starty;
+		int ax=0, ay=0;
+		int duo=0;
+		Random rand=new Random();
+		while(dead==0) {
+			/////////////////////////says whether to go uop or down, and positibe or nagative
+			int xh=rand.nextInt(2)+1;
+			int yh=rand.nextInt(2)+1;
+			duo=rand.nextInt(2)+1;
+			System.out.println();
+			if(duo==2){				
+				if(xh==1) {
+					ax=1;
+				}else if(xh==2) {
+					ax=-1;
+				}
+			}else if(duo==1){				
+				if(yh==1) {
+					ay=1;
+				}else if(yh==2) {
+					ay=-1;
+				}
+			}
+			//////////////////////////
+			
+
+			
+			//tssts if the thing bumps into itsself trys
+			if(board[xx+ax][yy+ay]=="[0]") {
+				if(board[xx+ax+1][yy+ay]=="[0]" && board[xx+ax-1][yy+ay]=="[0]" && board[xx+ax][yy+ay+1]=="[0]" && board[xx+ax][yy+ay-1]=="[0]") {
+					dead=1;
+				}
+			}
+			
+			System.out.println("");
+			System.out.println("dead"+dead);
+			System.out.println("sx"+startx);
+			System.out.println("sy"+starty);
+			System.out.println("xx"+xx);
+			System.out.println("yy"+yy);
+			System.out.println("ax"+ax);
+			System.out.println("ay"+ay);
+
+			//stops infinite loops
+			dead=1;
+		
+
 
 		}
 	}
