@@ -50,10 +50,22 @@ public class GUI {
 			System.out.println("Speedup " + time);
 			} 
 			});
+		//starts the game
+		slowdown = new JButton("Play");
+		c.gridx = 3;
+		c.gridy = 2;
+		panel.add(slowdown, c);
+		slowdown.addActionListener(new ActionListener(){ 
+			@Override 
+			public void actionPerformed(ActionEvent arg0) { 
+			
+			} 
+			});
+		
 		
 		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (finished)
 		slowdown = new JButton("Slowdown");
-		c.gridx = 30;
+		c.gridx = 2;
 		c.gridy = 2;
 		panel.add(slowdown, c);
 		slowdown.addActionListener(new ActionListener(){ 
