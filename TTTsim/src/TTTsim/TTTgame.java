@@ -37,7 +37,7 @@ public class TTTgame {
 	/**
 	 * Plays a turn and returns a square
 	 */
-	public void pTurn() {
+	public void turn() {
 		Random r = new Random();
 		int valid = 0;
 		int gx, gy;
@@ -109,6 +109,19 @@ public class TTTgame {
 		
 		//Returns 0 if no-one won, 1 for player 1, 2 for player 2
 		return winner;
+
+	}
+	
+	/**
+	 * Resets the board to empty
+	 */
+	public void reset() {
+		//Literally all it does is reset it
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				board[i][j] = 0;
+			}
+		}
 
 	}
 
