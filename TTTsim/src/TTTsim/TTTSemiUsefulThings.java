@@ -7,7 +7,7 @@ public class TTTSemiUsefulThings {
 
 	public static void main(String[] args) {
 		//lukes autism corner. 
-		//COPY THIS FOR THE THING
+		//COPY THIS FOR THE THING, IT WORKS ON MILLISECONDS, SO ENTER 1000 FOR ONE SECOND, 15OO FOR 1.5 ECT.
 		//wait(1);
 		
 		//COPY THIS EXACTLY, JUST CHANGE THE ARRAY NAME
@@ -43,6 +43,13 @@ public class TTTSemiUsefulThings {
 		}
 	}
 	
+	public static void waita(int i) {
+		try {
+			Thread.sleep( i);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	//cuts an int into an array, with way too many steps, cause divison is too complicated for me
 	public static int[] intCutter(int input) {
@@ -254,7 +261,7 @@ public class TTTSemiUsefulThings {
 				break;
 
 			}
-			wait(1);
+			waita(1);
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -277,7 +284,7 @@ public class TTTSemiUsefulThings {
 			}else{
 				System.out.println("###> How'd you do that? Try again.");
 			}
-			wait(1);
+			waita(1);
 
 		}
 	}
@@ -355,7 +362,24 @@ public class TTTSemiUsefulThings {
 			if(board[xx+ax][yy+ay]=="[0]") {
 				if(board[xx+ax+1][yy+ay]=="[0]" && board[xx+ax-1][yy+ay]=="[0]" && board[xx+ax][yy+ay+1]=="[0]" && board[xx+ax][yy+ay-1]=="[0]") {
 					dead=1;
+				}else if(board[xx+ax+1][yy+ay]=="[ ]" && board[xx+ax-1][yy+ay]=="[0]" && board[xx+ax][yy+ay+1]=="[0]" && board[xx+ax][yy+ay-1]=="[0]") {
+					board[xx+1][yy]="[0]";
+					xx=xx+1;				
+				}else if(board[xx+ax+1][yy+ay]=="[0]" && board[xx+ax-1][yy+ay]=="[ ]" && board[xx+ax][yy+ay+1]=="[0]" && board[xx+ax][yy+ay-1]=="[0]") {
+					board[xx+1][yy]="[0]";
+					xx=xx-1;
+				}else if(board[xx+ax+1][yy+ay]=="[0]" && board[xx+ax-1][yy+ay]=="[0]" && board[xx+ax][yy+ay+1]=="[ ]" && board[xx+ax][yy+ay-1]=="[0]") {
+					board[xx][yy+1]="[0]";
+					yy=yy+1;
+				}else if(board[xx+ax+1][yy+ay]=="[0]" && board[xx+ax-1][yy+ay]=="[0]" && board[xx+ax][yy+ay+1]=="[0]" && board[xx+ax][yy+ay-1]=="[ ]") {
+					board[xx][yy-1]="[0]";
+					yy=yy+1;
 				}
+			}else if(xx+ax<=0){
+				
+			}else {
+				xx=xx+ax;
+				yy=yy+ay;
 			}
 			
 			System.out.println("");
@@ -368,7 +392,7 @@ public class TTTSemiUsefulThings {
 			System.out.println("ay"+ay);
 
 			//stops infinite loops
-			dead=1;
+			dead=0;
 		
 
 
