@@ -19,7 +19,7 @@ public class GUI {
 	public void GUI(){
 		//this imports lukes toolkit
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
-		TTTgame game = new TTTgame(0);
+		TTTgame game = new TTTgame();
 		
 		//This bit makes the window appear. DO NOT DELETE PLZ (finished)
 		frame = new JFrame("TicTacToe Simulator");
