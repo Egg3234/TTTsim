@@ -1,4 +1,13 @@
 package TTTsim;
+/*
+ * Samuel Giesbrecht
+ * Luke Schroeder
+ * Noah Voth
+ * 
+ * 10/20/18
+ * 
+ * Class to test methods from TTTgame
+ */
 
 public class tttGameTest {
 
