@@ -18,8 +18,8 @@ public class TTTgame {
 
 	//Constructor
 	public TTTgame() {
-		game = 1;
-		turn = 1;
+		game = 0;
+		turn = 2;
 		board = new int[3][3];
 		win = 0;
 		score1 = 0;
@@ -63,6 +63,16 @@ public class TTTgame {
 		
 		printBoard();
 
+	}
+	
+	/**
+	 * Returns the character at the given coordinates
+	 * @param x
+	 * @param y
+	 * @return
+	 */
+	public int getBoard(int x, int y) {
+		return board[x][y];
 	}
 	
 	/**
@@ -143,7 +153,7 @@ public class TTTgame {
 	/**
 	 * Changes p1 score
 	 */
-	public void sC1(int c) {
+	public void cS1(int c) {
 		score1 += c;
 	}
 	
