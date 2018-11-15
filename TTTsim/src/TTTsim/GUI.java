@@ -1,25 +1,40 @@
 package TTTsim;
+/*
+ * Noah Voth
+ * Luke Schroeder
+ * Samuel Giesbrecht
+ * 
+ * 11-14-18
+ * 
+ * GUI class for TTT simulator
+ */
+
 import java.awt.event.ActionListener;
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
-import java.awt.GridBagLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
 public class GUI {
-//preparing a crapton of visual variable things
-	JFrame frame;
-	JPanel panel;
-	JLabel label1, label2, label3, title;
-	JButton speedup, slowdown;
-	JTextField text1, text2, text3;
-	double time=1;
+	private JFrame frame;
+	private JPanel panel;
+	private JLabel label1, label2, label3, title;
+	private JLabel[][] grid;
+	private JButton speedup, slowdown, play;
+	private JTextField text1, text2, text3;
+	private String b, x, o;
+	private double time=1;
+	
 	public void GUI(){
-		//this imports lukes toolkit
+		//Creating instances of other classes and initializing variables
 		TTTSemiUsefulThings Tools = new TTTSemiUsefulThings();
 		TTTgame game = new TTTgame();
+		b = "[ ]";
+		x = "[X]";
+		o = "[O]";
 		
 		//This bit makes the window appear. DO NOT DELETE PLZ (finished)
 		frame = new JFrame("TicTacToe Simulator");
@@ -29,7 +44,7 @@ public class GUI {
 		panel = new JPanel();
 		GridBagConstraints c = new GridBagConstraints();
 		
-		//givin' it a title (finished)
+		//Givin' it a title (finished)
 		title = new JLabel("TIC TAC TOE");
 		//This picks the location of the object
 		c.gridx = 0;
@@ -37,7 +52,7 @@ public class GUI {
 		panel.add(title, c);
 		panel = new JPanel();
 		
-		//button to make the tttsim go supersonic using TTTSemiUsefullThings's wait bits (finished)
+		//Button to make the tttsim go supersonic using TTTSemiUsefullThings's wait bits (finished)
 		speedup = new JButton("SpeedUp");
 		c.gridx = 1;
 		c.gridy = 2;
@@ -49,24 +64,28 @@ public class GUI {
 			System.out.println("Speedup " + time);
 			} 
 			});
-		//starts the game
-		slowdown = new JButton("Play");
-		c.gridx = 3;
+		
+		//Runs the game
+		play = new JButton("Play");
+		c.gridx = 2;
 		c.gridy = 2;
-		panel.add(slowdown, c);
-		slowdown.addActionListener(new ActionListener(){ 
+		panel.add(play, c);
+		play.addActionListener(new ActionListener(){ 
 			@Override 
 			public void actionPerformed(ActionEvent arg0) { 
+				while(game.win()==0) {
+					game.turn();
+					Tools.wait(time);
+				}
 			game.turn();
-			game.win();
 			Tools.wait(time);
 			} 
 			});
 		
 		
-		//hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (finished)
+		//Hit this button to slow this boi down using TTTSemiUsefullThings's wait bits (finished)
 		slowdown = new JButton("Slowdown");
-		c.gridx = 2;
+		c.gridx = 3;
 		c.gridy = 2;
 		panel.add(slowdown, c);
 		slowdown.addActionListener(new ActionListener(){ 
@@ -77,9 +96,21 @@ public class GUI {
 			} 
 			});
 		
-		//the second bit that makes the window show up (finished)
+		//Creates nine squares
+		grid = new JLabel[3][3];
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				c.gridx = j + 1;
+				c.gridy = i + 2;
+				grid[i][j].setText(b);
+				panel.add(grid[i][j], c);
+			}
+		}
+		
+		//The second bit that makes the window show up (finished)
 		frame.setContentPane(panel);
 		frame.setVisible(true);
-		//that's all folks
+		//That's all folks
 }
+
 }

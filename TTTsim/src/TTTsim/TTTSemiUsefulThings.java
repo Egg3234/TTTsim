@@ -1,9 +1,18 @@
 package TTTsim;
+/*
+ * Luke Schroeder
+ * Noah Voth
+ * Samuel Giesbrecht
+ * 
+ * 11-15-18
+ * 
+ * Mainly adds wait function to TTT sim, but also has other stuff
+ */
+
 import java.util.Scanner;
 import java.util.Random;
-public class TTTSemiUsefulThings {
-	
 
+public class TTTSemiUsefulThings {
 
 	public static void main(String[] args) {
 		//lukes autism corner. 
